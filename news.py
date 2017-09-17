@@ -1,3 +1,5 @@
+#! /usr/bin/env python3
+
 import psycopg2
 
 DBNAME = "news"
@@ -29,8 +31,8 @@ def popular_articles():
     top_three = queries(query)
     print('The most popular articles of all time are:')
     for record in top_three:
-      print('\t' + '"' + str(record[0]) + '"' + ' --- '
-            + str(record[1]) + ' views')
+        print('\t' + '"' + str(record[0]) + '"' + ' --- '
+              + str(record[1]) + ' views')
 
 
 def most_popular_author():
